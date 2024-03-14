@@ -15,6 +15,7 @@ import Clock from "./Main";
 import Avatar2 from "./Avatar";
 import  getImageUrl1 from "./util";
 import PackingList from "./Condtional";
+import List from "./List";
 
 const carObjectModel={
 
@@ -100,6 +101,7 @@ export default function App(){
       />
     </div>
         <PackingList />
+        <List />
         
         </div>
     );
@@ -117,7 +119,7 @@ function Avatar1({person,size}){
         height={size}
         
         />
-
+        
     );
 }
 
