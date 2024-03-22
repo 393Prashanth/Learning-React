@@ -11,11 +11,15 @@ import { DoubleCurley } from "./Markup";
 import { Person } from "./Markup";
 import {TodoList} from "./Markup"
 import getImageUrl from "./util";
-import Clock from "./Main";
+
 import Avatar2 from "./Avatar";
 import  getImageUrl1 from "./util";
 import PackingList from "./Condtional";
 import List from "./List";
+import Button, { PlayButton, UploadButton } from "./Events";
+import User from "./Props";
+import { AlertButton } from "./Events";
+import Form from "./propsContainer/FirstComp";
 
 const carObjectModel={
 
@@ -28,10 +32,16 @@ const carObjectModel={
 export default function App(){
     return(
         <div>
-          <Clock />
+          <Form />
+         
+          <User name="Prashanth"
+          age='24'
+          
+          />
+          
         <CountriesList />
         <Array />
-        <FirstComp name="Prashanth"/>
+       
         <SecondComp name="Kumar"/>
         <CarModel car={carObjectModel} />
         <ComplexExample />
@@ -102,7 +112,18 @@ export default function App(){
     </div>
         <PackingList />
         <List />
-        
+      
+        <Button />
+        <div>
+      <AlertButton message="Playing!">
+        Play Movie
+      </AlertButton>
+      <AlertButton message="Uploading!">
+        Upload Image
+      </AlertButton>
+    </div>
+
+    
         </div>
     );
 }
